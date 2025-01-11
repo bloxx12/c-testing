@@ -1,0 +1,11 @@
+
+all: build
+
+build:
+    gcc symtable.c -o symtable
+
+sections: build
+    readelf -S ./symtable
+    
+clean:
+    rm symtable

@@ -1,0 +1,11 @@
+
+all: build
+
+build:
+    gcc ./vulnbuffer.c -o vulnbuffer
+
+sections: build
+    readelf -S ./vulnbuffer
+    
+clean:
+    rm ./vulnbuffer

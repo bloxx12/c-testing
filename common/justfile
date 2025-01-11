@@ -1,0 +1,11 @@
+
+all: build
+
+build:
+    gcc -fno-common -o common common.c init.c 
+
+sections: build
+    readelf -S ./common
+    
+clean:
+    rm common
