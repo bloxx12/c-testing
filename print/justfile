@@ -1,0 +1,11 @@
+
+all: build
+
+build:
+    gcc -fno-common -o print print.c 
+
+sections: build
+    readelf -S ./print
+    
+clean:
+    rm print

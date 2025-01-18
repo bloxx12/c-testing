@@ -1,0 +1,11 @@
+
+all: build
+
+build:
+    gcc owned.c -o owned
+
+sections: build
+    readelf -S ./owned
+    
+clean:
+    rm owned
